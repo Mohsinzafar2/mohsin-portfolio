@@ -726,56 +726,48 @@
       <section class="section">
         <div class="container">
           <div class="projects-grid" id="projects-grid">
-            <!-- Project 1: GastroCAD (Featured Flagship Horizontal Banner) -->
+            <!-- Project 1: GastroCAD (Featured Flagship Project) -->
             <article class="project-card featured-project" data-category="ai">
-              <div class="project-img-wrapper">
-                <img src="assets/images/gastrocad.jpg" alt="GastroCAD Stomach Cancer CAD System" class="project-img" loading="lazy">
-                <div class="project-overlay">
-                  <button class="btn btn-primary btn-sm open-modal-btn" data-project="gastrocad">
-                    <i class="fa-solid fa-book-open"></i> View Case Study
-                  </button>
+              <div>
+                <div class="project-card-header">
+                  <div class="project-icon-box">
+                    <i class="fa-solid fa-microscope text-accent"></i>
+                  </div>
+                  <span class="project-academic-tag"><i class="fa-solid fa-graduation-cap"></i> BS AI Graduation Thesis (2025)</span>
                 </div>
-                <span class="project-tag-floating"><i class="fa-solid fa-graduation-cap"></i> BS AI Graduation Thesis (2025)</span>
+                <div class="project-tags">
+                  <span class="badge badge-accent">Transformers (ViT)</span>
+                  <span class="badge badge-purple">PyTorch</span>
+                  <span class="badge badge-cyan">Flutter UI</span>
+                  <span class="badge">Medical CAD</span>
+                </div>
+                <h3 class="project-title">GastroCAD: Real-Time Stomach Cancer Diagnostic CAD</h3>
+                <p class="project-desc">
+                  Graduation thesis project at University of Haripur. Designed a computer-aided diagnosis system utilizing fine-tuned vision transformer architectures and a cross-platform Flutter clinical viewer to detect, segment, and visualize gastric neoplasms from real-time endoscopic imagery.
+                </p>
               </div>
-              <div class="project-content">
-                <div>
-                  <div class="project-tags">
-                    <span class="badge badge-accent">Transformers (ViT)</span>
-                    <span class="badge badge-purple">PyTorch</span>
-                    <span class="badge badge-cyan">Flutter UI</span>
-                    <span class="badge">Medical CAD</span>
-                  </div>
-                  <h3 class="project-title">GastroCAD: Real-Time Stomach Cancer Diagnostic CAD</h3>
-                  <p class="project-desc">
-                    Graduation thesis project at University of Haripur. Designed a computer-aided diagnosis system utilizing fine-tuned vision transformer architectures and a cross-platform Flutter clinical viewer to detect, segment, and visualize gastric neoplasms from real-time endoscopic imagery.
-                  </p>
+              <div>
+                <div class="project-metrics">
+                  <div class="metric"><i class="fa-solid fa-gauge-high text-accent"></i> 42ms Inference Latency</div>
+                  <div class="metric"><i class="fa-solid fa-bullseye text-success"></i> 89.2% F1-Score Benchmark</div>
                 </div>
-                <div>
-                  <div class="project-metrics">
-                    <div class="metric"><i class="fa-solid fa-gauge-high text-accent"></i> 42ms Inference Latency</div>
-                    <div class="metric"><i class="fa-solid fa-bullseye text-success"></i> 89.2% F1-Score Benchmark</div>
-                  </div>
-                  <div class="project-footer">
-                    <button class="btn btn-primary btn-sm open-modal-btn" data-project="gastrocad">
-                      Deep-Dive Case Study <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                  </div>
+                <div class="project-footer">
+                  <button class="btn btn-primary btn-sm open-modal-btn" data-project="gastrocad">
+                    <i class="fa-solid fa-book-open"></i> Deep-Dive Case Study <i class="fa-solid fa-arrow-right"></i>
+                  </button>
                 </div>
               </div>
             </article>
 
             <!-- Project 2: NeuralVision Computer Vision Suite -->
             <article class="project-card" data-category="ai">
-              <div class="project-img-wrapper">
-                <img src="assets/images/cv_suite.jpg" alt="NeuralVision Computer Vision Suite" class="project-img" loading="lazy">
-                <div class="project-overlay">
-                  <button class="btn btn-primary btn-sm open-modal-btn" data-project="vision">
-                    <i class="fa-solid fa-book-open"></i> View Case Study
-                  </button>
+              <div>
+                <div class="project-card-header">
+                  <div class="project-icon-box">
+                    <i class="fa-solid fa-eye text-cyan"></i>
+                  </div>
+                  <span class="project-academic-tag"><i class="fa-solid fa-flask"></i> 6th Sem Vision R&amp;D</span>
                 </div>
-                <span class="project-tag-floating"><i class="fa-solid fa-flask"></i> 6th Sem Vision R&amp;D</span>
-              </div>
-              <div class="project-content">
                 <div class="project-tags">
                   <span class="badge badge-accent">OpenCV</span>
                   <span class="badge badge-warning">TensorFlow</span>
@@ -785,13 +777,15 @@
                 <p class="project-desc">
                   Multi-module framework for automatic license plate recognition (ALPR OCR), 68-point facial mesh, and bone X-ray classification.
                 </p>
+              </div>
+              <div>
                 <div class="project-metrics">
                   <div class="metric"><i class="fa-solid fa-bolt text-accent"></i> 30+ FPS Live</div>
                   <div class="metric"><i class="fa-solid fa-car text-success"></i> 98% Plate Acc</div>
                 </div>
                 <div class="project-footer">
                   <button class="btn btn-outline btn-sm open-modal-btn" data-project="vision">
-                    Case Study <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-book-open"></i> Case Study <i class="fa-solid fa-arrow-right"></i>
                   </button>
                 </div>
               </div>
@@ -799,16 +793,13 @@
 
             <!-- Project 3: Full-Stack Flask Web Platform -->
             <article class="project-card" data-category="web">
-              <div class="project-img-wrapper">
-                <img src="assets/images/fullstack_app.jpg" alt="Full Stack Flask Web App" class="project-img" loading="lazy">
-                <div class="project-overlay">
-                  <button class="btn btn-primary btn-sm open-modal-btn" data-project="flask-app">
-                    <i class="fa-solid fa-book-open"></i> View Case Study
-                  </button>
+              <div>
+                <div class="project-card-header">
+                  <div class="project-icon-box">
+                    <i class="fa-solid fa-server text-purple"></i>
+                  </div>
+                  <span class="project-academic-tag"><i class="fa-solid fa-briefcase"></i> Smart Tech Internship</span>
                 </div>
-                <span class="project-tag-floating"><i class="fa-solid fa-briefcase"></i> Smart Tech Internship</span>
-              </div>
-              <div class="project-content">
                 <div class="project-tags">
                   <span class="badge badge-accent">Flask</span>
                   <span class="badge badge-purple">SQLAlchemy</span>
@@ -818,13 +809,15 @@
                 <p class="project-desc">
                   Engineered modular Flask RESTful API services with role-based access control, session security, and SQLAlchemy relational models.
                 </p>
+              </div>
+              <div>
                 <div class="project-metrics">
                   <div class="metric"><i class="fa-solid fa-lock text-accent"></i> RBAC Auth</div>
                   <div class="metric"><i class="fa-solid fa-database text-purple"></i> SQLAlchemy ORM</div>
                 </div>
                 <div class="project-footer">
                   <button class="btn btn-outline btn-sm open-modal-btn" data-project="flask-app">
-                    Case Study <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-book-open"></i> Case Study <i class="fa-solid fa-arrow-right"></i>
                   </button>
                 </div>
               </div>
@@ -832,16 +825,13 @@
 
             <!-- Project 4: Smart Home Voice Automation -->
             <article class="project-card" data-category="systems">
-              <div class="project-img-wrapper">
-                <img src="assets/images/smarthome.jpg" alt="Smart Home Voice Automation" class="project-img" loading="lazy">
-                <div class="project-overlay">
-                  <button class="btn btn-primary btn-sm open-modal-btn" data-project="smarthome">
-                    <i class="fa-solid fa-book-open"></i> View Case Study
-                  </button>
+              <div>
+                <div class="project-card-header">
+                  <div class="project-icon-box">
+                    <i class="fa-solid fa-microchip text-success"></i>
+                  </div>
+                  <span class="project-academic-tag"><i class="fa-solid fa-microchip"></i> C++ Hardware Project</span>
                 </div>
-                <span class="project-tag-floating"><i class="fa-solid fa-microchip"></i> C++ Hardware Project</span>
-              </div>
-              <div class="project-content">
                 <div class="project-tags">
                   <span class="badge badge-success">C++</span>
                   <span class="badge badge-cyan">Relay Hardware</span>
@@ -851,13 +841,15 @@
                 <p class="project-desc">
                   Embedded hardware-software system in C++ integrating physical relay actuators, lighting, and ventilation with local speech parsing.
                 </p>
+              </div>
+              <div>
                 <div class="project-metrics">
                   <div class="metric"><i class="fa-solid fa-microphone text-accent"></i> Local Voice Parser</div>
                   <div class="metric"><i class="fa-solid fa-lightbulb text-warning"></i> Tested Relays</div>
                 </div>
                 <div class="project-footer">
                   <button class="btn btn-outline btn-sm open-modal-btn" data-project="smarthome">
-                    Case Study <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-book-open"></i> Case Study <i class="fa-solid fa-arrow-right"></i>
                   </button>
                 </div>
               </div>
@@ -865,16 +857,13 @@
 
             <!-- Project 5: AI FAQ Chatbot & Learning Game -->
             <article class="project-card" data-category="ai">
-              <div class="project-img-wrapper">
-                <img src="assets/images/faq_chatbot.jpg" alt="FAQ Semantic Chatbot & Game AI" class="project-img" loading="lazy">
-                <div class="project-overlay">
-                  <button class="btn btn-primary btn-sm open-modal-btn" data-project="nlp-chatbot">
-                    <i class="fa-solid fa-book-open"></i> View Case Study
-                  </button>
+              <div>
+                <div class="project-card-header">
+                  <div class="project-icon-box">
+                    <i class="fa-solid fa-comments text-accent"></i>
+                  </div>
+                  <span class="project-academic-tag"><i class="fa-solid fa-brain"></i> Apexcify Internship</span>
                 </div>
-                <span class="project-tag-floating"><i class="fa-solid fa-brain"></i> Apexcify Internship</span>
-              </div>
-              <div class="project-content">
                 <div class="project-tags">
                   <span class="badge badge-accent">NLP</span>
                   <span class="badge badge-purple">Cosine Similarity</span>
@@ -884,13 +873,15 @@
                 <p class="project-desc">
                   Automated FAQ customer support assistant with TF-IDF cosine similarity, paired with an adaptive heuristic Rock-Paper-Scissors AI.
                 </p>
+              </div>
+              <div>
                 <div class="project-metrics">
                   <div class="metric"><i class="fa-solid fa-comment-dots text-accent"></i> Auto Resolution</div>
                   <div class="metric"><i class="fa-solid fa-brain text-purple"></i> Adaptive Engine</div>
                 </div>
                 <div class="project-footer">
                   <button class="btn btn-outline btn-sm open-modal-btn" data-project="nlp-chatbot">
-                    Case Study <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-book-open"></i> Case Study <i class="fa-solid fa-arrow-right"></i>
                   </button>
                 </div>
               </div>
@@ -898,16 +889,13 @@
 
             <!-- Project 6: Automated Irrigation System (DLD) -->
             <article class="project-card" data-category="systems">
-              <div class="project-img-wrapper">
-                <img src="assets/images/irrigation_dld.jpg" alt="Automated Irrigation System DLD" class="project-img" loading="lazy">
-                <div class="project-overlay">
-                  <button class="btn btn-primary btn-sm open-modal-btn" data-project="irrigation-dld">
-                    <i class="fa-solid fa-book-open"></i> View Case Study
-                  </button>
+              <div>
+                <div class="project-card-header">
+                  <div class="project-icon-box">
+                    <i class="fa-solid fa-seedling text-success"></i>
+                  </div>
+                  <span class="project-academic-tag"><i class="fa-solid fa-seedling"></i> DLD Coursework</span>
                 </div>
-                <span class="project-tag-floating"><i class="fa-solid fa-seedling"></i> DLD Coursework</span>
-              </div>
-              <div class="project-content">
                 <div class="project-tags">
                   <span class="badge badge-success">Digital Logic (DLD)</span>
                   <span class="badge">Logic Gates</span>
@@ -917,13 +905,15 @@
                 <p class="project-desc">
                   Designed combinational logic gate circuits using soil moisture sensor inputs to optimize automated agricultural water valve switching.
                 </p>
+              </div>
+              <div>
                 <div class="project-metrics">
                   <div class="metric"><i class="fa-solid fa-droplet text-accent"></i> K-Map Optimized</div>
                   <div class="metric"><i class="fa-solid fa-microchip text-success"></i> Gate Architecture</div>
                 </div>
                 <div class="project-footer">
                   <button class="btn btn-outline btn-sm open-modal-btn" data-project="irrigation-dld">
-                    Case Study <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-book-open"></i> Case Study <i class="fa-solid fa-arrow-right"></i>
                   </button>
                 </div>
               </div>
@@ -931,16 +921,13 @@
 
             <!-- Project 7: Railway Management System in C++ -->
             <article class="project-card" data-category="web">
-              <div class="project-img-wrapper">
-                <img src="assets/images/railway_system.jpg" alt="Railway Reservation & Schedule Management" class="project-img" loading="lazy">
-                <div class="project-overlay">
-                  <button class="btn btn-primary btn-sm open-modal-btn" data-project="railway-system">
-                    <i class="fa-solid fa-book-open"></i> View Case Study
-                  </button>
+              <div>
+                <div class="project-card-header">
+                  <div class="project-icon-box">
+                    <i class="fa-solid fa-train text-warning"></i>
+                  </div>
+                  <span class="project-academic-tag"><i class="fa-solid fa-train"></i> 2nd Sem OOP Project</span>
                 </div>
-                <span class="project-tag-floating"><i class="fa-solid fa-train"></i> 2nd Sem OOP Project</span>
-              </div>
-              <div class="project-content">
                 <div class="project-tags">
                   <span class="badge badge-success">C++ OOP</span>
                   <span class="badge">Binary File I/O</span>
@@ -950,13 +937,15 @@
                 <p class="project-desc">
                   Console-based transit platform applying OOP inheritance, passenger seat allotment algorithms, and persistent binary file records.
                 </p>
+              </div>
+              <div>
                 <div class="project-metrics">
                   <div class="metric"><i class="fa-solid fa-train text-accent"></i> Pure C++ OOP</div>
                   <div class="metric"><i class="fa-solid fa-file-code text-purple"></i> Binary Records</div>
                 </div>
                 <div class="project-footer">
                   <button class="btn btn-outline btn-sm open-modal-btn" data-project="railway-system">
-                    Case Study <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-book-open"></i> Case Study <i class="fa-solid fa-arrow-right"></i>
                   </button>
                 </div>
               </div>
