@@ -1,9 +1,10 @@
 /**
  * MUHAMMAD MOHSIN ZAFAR - PORTFOLIO INTERACTION ENGINE
- * Particle Canvas, Live AI Simulators, Case Study Modals, Chatbot, Terminal, & Contact Logic
+ * Multi-Page View Routing, Neural Canvas, Live AI Simulators, Case Study Modals, Chatbot, Terminal & Contact Logic
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initPageRouter();
   initNeuralCanvas();
   initNavbarAndDrawer();
   initThemeToggle();
@@ -16,7 +17,76 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. NEURAL NETWORK CANVAS ANIMATION
+   1. MULTI-PAGE VIEW ROUTER (ELIMINATES ENDLESS SCROLLING)
+   ========================================================================== */
+function initPageRouter() {
+  const pageViews = document.querySelectorAll('.page-view');
+  const navLinks = document.querySelectorAll('.page-nav-link');
+  const drawer = document.getElementById('mobile-drawer');
+
+  const VALID_PAGES = ['home', 'about', 'skills', 'projects', 'ai-lab', 'experience', 'education', 'contact'];
+
+  function switchPage(pageId) {
+    if (!VALID_PAGES.includes(pageId)) {
+      pageId = 'home';
+    }
+
+    // Hide all pages, show target page
+    pageViews.forEach((pv) => {
+      pv.classList.remove('active');
+    });
+
+    const targetPage = document.getElementById(`page-${pageId}`);
+    if (targetPage) {
+      targetPage.classList.add('active');
+    }
+
+    // Update active state on nav links
+    navLinks.forEach((link) => {
+      const linkPage = link.getAttribute('data-page');
+      if (linkPage === pageId) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+
+    // Close mobile drawer if open
+    if (drawer && drawer.classList.contains('open')) {
+      drawer.classList.remove('open');
+    }
+
+    // Scroll directly to top of the new page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function handleRoute() {
+    let hash = window.location.hash.replace(/^#\/?/, '').trim();
+    if (!hash) hash = 'home';
+    switchPage(hash);
+  }
+
+  // Intercept click on any page nav link
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('.page-nav-link');
+    if (link) {
+      const page = link.getAttribute('data-page');
+      if (page) {
+        e.preventDefault();
+        window.location.hash = `#/${page}`;
+      }
+    }
+  });
+
+  // Listen for browser Back / Forward buttons
+  window.addEventListener('hashchange', handleRoute);
+
+  // Initialize on initial page load
+  handleRoute();
+}
+
+/* ==========================================================================
+   2. NEURAL NETWORK CANVAS ANIMATION
    ========================================================================== */
 function initNeuralCanvas() {
   const canvas = document.getElementById('neuralCanvas');
@@ -123,19 +193,17 @@ function initNeuralCanvas() {
 }
 
 /* ==========================================================================
-   2. NAVBAR, MOBILE DRAWER & ACTIVE LINKS
+   3. NAVBAR & MOBILE DRAWER
    ========================================================================== */
 function initNavbarAndDrawer() {
   const navbar = document.getElementById('navbar');
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const drawer = document.getElementById('mobile-drawer');
   const drawerCloseBtn = document.getElementById('drawer-close-btn');
-  const drawerLinks = document.querySelectorAll('.drawer-link');
-  const navLinks = document.querySelectorAll('.nav-link');
 
   // Sticky blur on scroll
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
+    if (window.scrollY > 30) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
@@ -154,37 +222,10 @@ function initNavbarAndDrawer() {
       drawer.classList.remove('open');
     });
   }
-
-  drawerLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      drawer.classList.remove('open');
-    });
-  });
-
-  // Intersection Observer for active nav highlighting
-  const sections = document.querySelectorAll('section[id]');
-  const observerOptions = { rootMargin: '-30% 0px -60% 0px' };
-
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        navLinks.forEach((link) => {
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
-        });
-      }
-    });
-  }, observerOptions);
-
-  sections.forEach((sec) => sectionObserver.observe(sec));
 }
 
 /* ==========================================================================
-   3. THEME TOGGLING (DARK / LIGHT)
+   4. THEME TOGGLING (DARK / LIGHT)
    ========================================================================== */
 function initThemeToggle() {
   const toggleBtn = document.getElementById('theme-toggle');
@@ -204,7 +245,7 @@ function initThemeToggle() {
 }
 
 /* ==========================================================================
-   4. PROJECT FILTERING
+   5. PROJECT FILTERING
    ========================================================================== */
 function initProjectFiltering() {
   const filterBtns = document.querySelectorAll('.filter-btn');
@@ -221,7 +262,7 @@ function initProjectFiltering() {
         const category = card.getAttribute('data-category');
         if (filter === 'all' || category === filter) {
           card.style.display = 'flex';
-          card.style.animation = 'fadeIn 0.4s ease forwards';
+          card.style.animation = 'pageFadeIn 0.35s ease forwards';
         } else {
           card.style.display = 'none';
         }
@@ -231,7 +272,7 @@ function initProjectFiltering() {
 }
 
 /* ==========================================================================
-   5. CASE STUDY DATA & INTERACTIVE MODAL (COMPREHENSIVE ONE-PAGE SPECS)
+   6. CASE STUDY DATA & MODAL
    ========================================================================== */
 const CASE_STUDIES = {
   gastrocad: {
@@ -466,11 +507,10 @@ function initCaseStudyModal() {
 
       <div class="case-section" style="padding-top: 16px; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
         <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-brands fa-github text-accent"></i> ${data.githubNotice}</span>
-        <a href="#contact" class="btn btn-primary btn-sm modal-contact-link"><i class="fa-solid fa-envelope"></i> Discuss This Project</a>
+        <a href="#/contact" class="btn btn-primary btn-sm modal-contact-link page-nav-link" data-page="contact"><i class="fa-solid fa-envelope"></i> Discuss This Project</a>
       </div>
     `;
 
-    // Hook contact link to close modal and scroll
     const contactLink = container.querySelector('.modal-contact-link');
     if (contactLink) {
       contactLink.addEventListener('click', () => {
@@ -513,7 +553,7 @@ function initCaseStudyModal() {
 }
 
 /* ==========================================================================
-   6. INTERACTIVE AI LAB & GASTROCAD SIMULATOR
+   7. INTERACTIVE AI LAB & GASTROCAD SIMULATOR
    ========================================================================== */
 function initInteractiveLab() {
   const tabButtons = document.querySelectorAll('.sandbox-tab-btn');
@@ -602,7 +642,7 @@ function initInteractiveLab() {
 }
 
 /* ==========================================================================
-   7. DIGITAL TWIN AI ASSISTANT (CHATBOT TRAINED ON MOHSIN'S CV)
+   8. DIGITAL TWIN AI ASSISTANT (CHATBOT)
    ========================================================================== */
 function initDigitalTwinChat() {
   const form = document.getElementById('chat-form');
@@ -670,7 +710,6 @@ function initDigitalTwinChat() {
     appendMessage(query, true);
     input.value = '';
 
-    // Simulated typing delay
     setTimeout(() => {
       const response = getAiResponse(query);
       appendMessage(response, false);
@@ -689,7 +728,7 @@ function initDigitalTwinChat() {
 }
 
 /* ==========================================================================
-   8. INTERACTIVE DEVELOPER CLI TERMINAL
+   9. INTERACTIVE DEVELOPER CLI TERMINAL
    ========================================================================== */
 function initDeveloperTerminal() {
   const input = document.getElementById('term-input');
@@ -773,7 +812,7 @@ Open for Full Stack AI Engineering, Machine Learning, and Python Backend roles (
 }
 
 /* ==========================================================================
-   9. CONTACT FORM & INSTANT CLIPBOARD NOTIFICATIONS
+   10. CONTACT FORM & INSTANT CLIPBOARD NOTIFICATIONS
    ========================================================================== */
 function initContactAndClipboard() {
   const form = document.getElementById('contact-form');
@@ -789,7 +828,6 @@ function initContactAndClipboard() {
           showToast(`Copied "${textToCopy}" to clipboard!`);
         });
       } else {
-        // Fallback
         const textarea = document.createElement('textarea');
         textarea.value = textToCopy;
         document.body.appendChild(textarea);
@@ -819,7 +857,6 @@ function initContactAndClipboard() {
         return;
       }
 
-      // Display immediate success feedback
       if (feedback) {
         feedback.innerHTML = `Thank you, <strong>${name}</strong>! Your message has been prepared. Opening your email client to send to <strong>mohsinz35425@gmail.com</strong>...`;
         feedback.className = 'form-feedback success';
@@ -827,7 +864,6 @@ function initContactAndClipboard() {
 
       showToast('Opening default email client...');
 
-      // Compose mailto URI
       const mailtoUrl = `mailto:mohsinz35425@gmail.com?subject=${encodeURIComponent(
         `[Portfolio] ${subject}`
       )}&body=${encodeURIComponent(
@@ -844,7 +880,7 @@ function initContactAndClipboard() {
 }
 
 /* ==========================================================================
-   10. FLOATING TOAST HELPER
+   11. FLOATING TOAST HELPER
    ========================================================================== */
 function showToast(message) {
   const container = document.getElementById('toast-container');
