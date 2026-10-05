@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Mohsin Zafar | Full Stack AI Engineer & ML Specialist</title>
+  <meta name="description" content="Portfolio of Muhammad Mohsin Zafar - Full Stack AI Engineer, Computer Vision Researcher, and Python Developer specializing in Transformer Models, Medical CAD Systems, and Scalable Web Applications.">
+  <meta name="keywords" content="Muhammad Mohsin Zafar, AI Engineer, Full Stack Developer, Computer Vision, Machine Learning, Python Flask, GastroCAD, Deep Learning, Islamabad Pakistan">
+  <meta name="author" content="Muhammad Mohsin Zafar">
+
+  <!-- Open Graph / Meta for Social Previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Muhammad Mohsin Zafar | Full Stack AI Engineer">
+  <meta property="og:description" content="AI Engineer & Full-Stack Developer specializing in Deep Learning, Computer Vision, and Modern Web Applications.">
+  <meta property="og:image" content="assets/images/mohsin_avatar.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Neural Background Canvas -->
+  <canvas id="neuralCanvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" id="brand-logo">
+        <span class="logo-symbol">&lt;</span>
+        <span class="logo-text">Mohsin<span class="text-accent">.AI</span></span>
+        <span class="logo-symbol">/&gt;</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#ai-sandbox" class="nav-link highlight-link"><i class="fa-solid fa-sparkles"></i> AI Lab</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-sun light-icon"></i>
+          <i class="fa-solid fa-moon dark-icon"></i>
+        </button>
+
+        <!-- Resume Download Button -->
+        <a href="Mohsin_Zafar_Resume.pdf" download="Mohsin_Zafar_Resume.pdf" class="btn btn-outline nav-resume-btn" id="nav-resume-btn">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>Resume</span>
+        </a>
+
+        <!-- Mobile Hamburger Menu Button -->
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Open mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <span class="brand-logo">&lt;Mohsin<span class="text-accent">.AI</span> /&gt;</span>
+      <button class="drawer-close-btn" id="drawer-close-btn">&times;</button>
+    </div>
+    <ul class="drawer-list">
+      <li><a href="#about" class="drawer-link">About</a></li>
+      <li><a href="#skills" class="drawer-link">Skills</a></li>
+      <li><a href="#projects" class="drawer-link">Projects & Case Studies</a></li>
+      <li><a href="#experience" class="drawer-link">Experience</a></li>
+      <li><a href="#education" class="drawer-link">Education</a></li>
+      <li><a href="#ai-sandbox" class="drawer-link"><i class="fa-solid fa-wand-magic-sparkles text-accent"></i> Interactive AI Lab</a></li>
+      <li><a href="#contact" class="drawer-link">Contact</a></li>
+    </ul>
+    <div class="drawer-actions">
+      <a href="Mohsin_Zafar_Resume.pdf" download="Mohsin_Zafar_Resume.pdf" class="btn btn-primary w-full">
+        <i class="fa-solid fa-file-arrow-down"></i> Download Resume (PDF)
+      </a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Availability Badge -->
+          <div class="status-badge" id="hero-status-badge">
+            <span class="status-dot"></span>
+            <span class="status-text">Available for AI & Full-Stack Engineering Roles</span>
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Muhammad Mohsin Zafar</span>
+          </h1>
+          <h2 class="hero-subtitle">
+            Full Stack <span class="text-accent">AI Engineer</span> &amp; Machine Learning Specialist
+          </h2>
+
+          <!-- Hero Pitch -->
+          <p class="hero-description">
+            Passionate software engineer bridging state-of-the-art <strong>Deep Learning &amp; Computer Vision</strong> with resilient <strong>Full-Stack Web Architecture</strong>. Creator of <em>GastroCAD</em> — an AI-powered real-time cancer diagnostic CAD system, and experienced across 5 industry roles building automated AI pipelines and high-performance backend systems.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-diagram-project"></i>
+              <span>Explore Projects</span>
+            </a>
+            <a href="Mohsin_Zafar_Resume.pdf" download="Mohsin_Zafar_Resume.pdf" class="btn btn-outline">
+              <i class="fa-solid fa-download"></i>
+              <span>Download CV</span>
+            </a>
+            <a href="#ai-sandbox" class="btn btn-ghost">
+              <i class="fa-solid fa-terminal"></i>
+              <span>Try Live AI Demo</span>
+            </a>
+          </div>
+
+          <!-- Hero Social Links & Contact Badges -->
+          <div class="hero-quick-links">
+            <a href="mailto:mohsinz35425@gmail.com" class="quick-pill" title="Email Mohsin">
+              <i class="fa-solid fa-envelope"></i>
+              <span>mohsinz35425@gmail.com</span>
+            </a>
+            <a href="https://wa.me/923319981044" target="_blank" rel="noopener noreferrer" class="quick-pill whatsapp-pill" title="WhatsApp Message">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>(+92) 331 9981044</span>
+            </a>
+            <span class="quick-pill location-pill" title="Location">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Islamabad, Pakistan</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Glass HUD & 3D Avatar Card -->
+        <div class="hero-visual">
+          <div class="profile-card-glass">
+            <div class="card-glow"></div>
+            <div class="avatar-wrapper">
+              <img src="assets/images/mohsin_avatar.jpg" alt="Muhammad Mohsin Zafar - AI Engineer" class="profile-avatar" id="hero-avatar">
+              <div class="avatar-badge">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+            </div>
+
+            <div class="card-details">
+              <h3 class="card-name">Muhammad Mohsin Zafar</h3>
+              <p class="card-role">Full Stack AI Engineer</p>
+
+              <!-- Floating Tech Badges -->
+              <div class="floating-tech-tags">
+                <span class="tech-chip"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="tech-chip"><i class="fa-solid fa-robot"></i> Transformers</span>
+                <span class="tech-chip"><i class="fa-solid fa-eye"></i> OpenCV</span>
+                <span class="tech-chip"><i class="fa-solid fa-server"></i> Flask API</span>
+                <span class="tech-chip"><i class="fa-solid fa-code"></i> C++</span>
+              </div>
+
+              <!-- Live HUD Telemetry Widget -->
+              <div class="hud-telemetry">
+                <div class="telemetry-item">
+                  <span class="tel-label">System State</span>
+                  <span class="tel-val text-success"><i class="fa-solid fa-circle-check"></i> Production Ready</span>
+                </div>
+                <div class="telemetry-item">
+                  <span class="tel-label">CAD Latency</span>
+                  <span class="tel-val text-accent font-mono">42 ms (Real-Time)</span>
+                </div>
+                <div class="telemetry-item">
+                  <span class="tel-label">Model Accuracy</span>
+                  <span class="tel-val text-warning font-mono">89.2% F1-Score</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Ribbon -->
+      <div class="container">
+        <div class="stats-ribbon">
+          <div class="stat-card">
+            <div class="stat-number gradient-text" data-target="3.74">3.74</div>
+            <div class="stat-label">CGPA (B.S. Artificial Intelligence)</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <div class="stat-number gradient-text" data-target="5">5+</div>
+            <div class="stat-label">Industry &amp; Research Roles</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <div class="stat-number gradient-text" data-target="7">7+</div>
+            <div class="stat-label">Engineered Systems &amp; Projects</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-card">
+            <div class="stat-number gradient-text" data-target="100">100%</div>
+            <div class="stat-label">Code Quality &amp; Clean Architecture</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Bridging Artificial Intelligence with Enterprise Software</h2>
+          <p class="section-subtitle">
+            A developer who solves real-world challenges through mathematical rigor, modern machine learning models, and reliable full-stack engineering.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Bio Text Column -->
+          <div class="about-bio-card">
+            <h3 class="about-card-title"><i class="fa-solid fa-user-astronaut text-accent"></i> Engineering Profile</h3>
+            <p>
+              I am a <strong>Full Stack AI Engineer</strong> with a Bachelor's in Artificial Intelligence from the University of Haripur (CGPA 3.74/4.0). My career is driven by one objective: turning cutting-edge machine learning research into production software that people and businesses can rely upon.
+            </p>
+            <p>
+              My crown academic achievement is <strong>GastroCAD</strong> — a computer-aided diagnosis platform utilizing transformer-based deep learning models to inspect endoscopic video streams in real-time, detecting gastric neoplasms and stomach cancer indicators to assist clinical physicians.
+            </p>
+            <p>
+              Beyond deep learning, I build full-stack web applications using <strong>Python (Flask, SQLAlchemy), RESTful APIs, JavaScript</strong>, and modular <strong>C++ systems</strong>. Having worked in 5 organizations across full-stack AI development, IT infrastructure, and web engineering, I bring end-to-end reliability from database design to neural inference.
+            </p>
+
+            <div class="bio-highlights">
+              <div class="highlight-item">
+                <i class="fa-solid fa-graduation-cap text-accent"></i>
+                <div>
+                  <strong>B.S. Artificial Intelligence</strong>
+                  <span>University of Haripur (3.74 CGPA)</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-language text-accent"></i>
+                <div>
+                  <strong>Bilingual Fluency</strong>
+                  <span>English (C1/C2 Proficient), Urdu (Native)</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-briefcase text-accent"></i>
+                <div>
+                  <strong>Current Role</strong>
+                  <span>Full Stack AI Engineer at Whoopit SMC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Pillars Grid -->
+          <div class="about-pillars">
+            <div class="pillar-card">
+              <div class="pillar-icon-box">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+              <h4>Deep Learning &amp; Computer Vision</h4>
+              <p>
+                Hands-on expertise developing transformer architectures, CNNs, OpenCV image processing pipelines, object detection models, and medical image segmentation.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon-box">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <h4>Full-Stack &amp; RESTful APIs</h4>
+              <p>
+                Architecting clean backend services with Flask, SQLAlchemy, authentication sessions, database optimization, and intuitive frontend user interfaces.
+              </p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon-box">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <h4>Low-Level Systems &amp; Automation</h4>
+              <p>
+                Building reliable C++ Object-Oriented software, digital logic design circuits (DLD), IoT hardware integrations, and business process automation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE AI LAB & SANDBOX (WOW FACTOR) -->
+    <section class="section ai-sandbox-section" id="ai-sandbox">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-flask"></i> Interactive Showcase</span>
+          <h2 class="section-title">Live AI &amp; Systems Laboratory</h2>
+          <p class="section-subtitle">
+            Interact with live simulations of Mohsin's engineered systems right in your browser.
+          </p>
+        </div>
+
+        <div class="sandbox-container">
+          <!-- Sandbox Tabs -->
+          <div class="sandbox-tabs">
+            <button class="sandbox-tab-btn active" data-tab="gastrocad-tab">
+              <i class="fa-solid fa-microscope"></i>
+              <span>GastroCAD Simulator</span>
+            </button>
+            <button class="sandbox-tab-btn" data-tab="vision-tab">
+              <i class="fa-solid fa-eye"></i>
+              <span>NeuralVision OCR &amp; Landmarks</span>
+            </button>
+            <button class="sandbox-tab-btn" data-tab="assistant-tab">
+              <i class="fa-solid fa-robot"></i>
+              <span>Ask Mohsin's Digital Twin</span>
+            </button>
+            <button class="sandbox-tab-btn" data-tab="cli-tab">
+              <i class="fa-solid fa-terminal"></i>
+              <span>Interactive CLI Terminal</span>
+            </button>
+          </div>
+
+          <!-- Tab 1: GastroCAD Simulator -->
+          <div class="sandbox-pane active" id="gastrocad-tab">
+            <div class="simulator-layout">
+              <div class="sim-display-col">
+                <div class="sim-screen-card">
+                  <div class="screen-header">
+                    <span class="screen-title"><i class="fa-solid fa-video text-danger"></i> Endoscopy Feed AI Inference Stream</span>
+                    <span class="sim-badge" id="sim-status">Engine: Standby</span>
+                  </div>
+                  <div class="sim-viewport">
+                    <img src="assets/images/gastrocad.jpg" alt="GastroCAD Neural Visualization" class="sim-img" id="sim-case-img">
+                    <div class="sim-overlay" id="sim-overlay">
+                      <!-- Dynamic Inference Bounding Box -->
+                      <div class="detection-box" id="sim-box" style="top: 25%; left: 36%; width: 28%; height: 35%;">
+                        <span class="box-label" id="sim-box-label">Lesion #001: 89.2%</span>
+                        <div class="box-pulse"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sim-controls-col">
+                <div class="control-box">
+                  <h4><i class="fa-solid fa-sliders text-accent"></i> Select Test Case</h4>
+                  <div class="case-buttons">
+                    <button class="case-btn active" data-case="case1" data-label="Suspected Adenocarcinoma (89.2%)" data-top="25" data-left="36" data-width="28" data-height="35" data-risk="High" data-latency="42ms">
+                      Case #1: Gastric Neoplasm
+                    </button>
+                    <button class="case-btn" data-case="case2" data-label="Erosive Gastric Lesion (76.4%)" data-top="40" data-left="22" data-width="20" data-height="25" data-risk="Moderate" data-latency="38ms">
+                      Case #2: Erosive Gastritis
+                    </button>
+                    <button class="case-btn" data-case="case3" data-label="Normal Mucosa (99.1% Healthy)" data-top="15" data-left="25" data-width="20" data-height="22" data-risk="Minimal" data-latency="35ms">
+                      Case #3: Normal Mucosa
+                    </button>
+                  </div>
+
+                  <div class="inference-action">
+                    <button class="btn btn-primary w-full" id="run-inference-btn">
+                      <i class="fa-solid fa-bolt"></i> Run Transformer CAD Inference
+                    </button>
+                  </div>
+
+                  <div class="metrics-panel">
+                    <div class="metric-row">
+                      <span>Model Backbone:</span>
+                      <strong class="font-mono text-accent">Vision-Transformer (ViT-CAD)</strong>
+                    </div>
+                    <div class="metric-row">
+                      <span>Inference Latency:</span>
+                      <strong class="font-mono" id="sim-latency">42 ms</strong>
+                    </div>
+                    <div class="metric-row">
+                      <span>Risk Assessment:</span>
+                      <strong class="font-mono text-danger" id="sim-risk">High Risk</strong>
+                    </div>
+                    <div class="metric-row">
+                      <span>Clinical Confidence:</span>
+                      <strong class="font-mono text-success" id="sim-conf">89.2%</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Vision Suite Tester -->
+          <div class="sandbox-pane" id="vision-tab">
+            <div class="simulator-layout">
+              <div class="sim-display-col">
+                <div class="sim-screen-card">
+                  <div class="screen-header">
+                    <span class="screen-title"><i class="fa-solid fa-camera text-accent"></i> Computer Vision Multi-Stream</span>
+                    <span class="sim-badge text-success">OpenCV + TensorFlow</span>
+                  </div>
+                  <div class="sim-viewport">
+                    <img src="assets/images/cv_suite.jpg" alt="Computer Vision Suite" class="sim-img">
+                  </div>
+                </div>
+              </div>
+
+              <div class="sim-controls-col">
+                <div class="control-box">
+                  <h4><i class="fa-solid fa-cubes text-accent"></i> Active Vision Modules</h4>
+                  <ul class="vision-module-list">
+                    <li class="vision-item active">
+                      <div class="vision-info">
+                        <strong>1. Automatic License Plate Recognition (ALPR)</strong>
+                        <span>Bilateral filtering, contour localization, Tesseract OCR (98% Conf)</span>
+                      </div>
+                      <span class="badge badge-success">31 FPS</span>
+                    </li>
+                    <li class="vision-item active">
+                      <div class="vision-info">
+                        <strong>2. 68-Point Facial Landmark Mesh</strong>
+                        <span>Dlib / MediaPipe real-time geometric landmark calculation (99.1% Conf)</span>
+                      </div>
+                      <span class="badge badge-success">19ms</span>
+                    </li>
+                    <li class="vision-item active">
+                      <div class="vision-info">
+                        <strong>3. Bone Fracture X-Ray Classifier</strong>
+                        <span>Convolutional feature extraction for structural bone displacement (91% Conf)</span>
+                      </div>
+                      <span class="badge badge-warning">Review</span>
+                    </li>
+                    <li class="vision-item active">
+                      <div class="vision-info">
+                        <strong>4. Real-time Eye Gaze Vector</strong>
+                        <span>Pupil center localization &amp; directional vector projection (97% Conf)</span>
+                      </div>
+                      <span class="badge badge-success">Live</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Ask Mohsin's Digital Twin -->
+          <div class="sandbox-pane" id="assistant-tab">
+            <div class="chat-container">
+              <div class="chat-header">
+                <div class="chat-avatar">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <div>
+                  <strong>Mohsin's AI Assistant</strong>
+                  <span class="chat-status">Trained on Mohsin's verified CV &amp; project history</span>
+                </div>
+              </div>
+
+              <div class="chat-messages" id="chat-messages">
+                <div class="chat-bubble bot-bubble">
+                  <p>Hello! I am Mohsin's AI assistant. Ask me anything about his technical stack, degree, thesis (GastroCAD), work history, or hiring availability!</p>
+                </div>
+              </div>
+
+              <div class="chat-quick-prompts">
+                <button class="prompt-chip" data-prompt="What was Mohsin's thesis on?">What was his thesis on?</button>
+                <button class="prompt-chip" data-prompt="What are his core AI and ML skills?">What are his core AI skills?</button>
+                <button class="prompt-chip" data-prompt="What full-stack web technologies does he use?">What full-stack tech does he use?</button>
+                <button class="prompt-chip" data-prompt="Is Mohsin available for hiring?">Is Mohsin open for hire?</button>
+              </div>
+
+              <form class="chat-input-form" id="chat-form">
+                <input type="text" id="chat-input" placeholder="Type a question about Mohsin's experience..." autocomplete="off">
+                <button type="submit" class="btn btn-primary" aria-label="Send message">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Tab 4: Interactive CLI Terminal -->
+          <div class="sandbox-pane" id="cli-tab">
+            <div class="terminal-card">
+              <div class="terminal-bar">
+                <div class="terminal-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="terminal-title">mohsin@ai-engineer: ~ (zsh)</span>
+              </div>
+              <div class="terminal-body" id="terminal-body">
+                <p class="term-line">Welcome to Mohsin's interactive developer terminal.</p>
+                <p class="term-line">Type <span class="text-accent font-bold">'help'</span> to see available commands or try <span class="text-accent font-bold">'projects'</span>, <span class="text-accent font-bold">'skills'</span>, <span class="text-accent font-bold">'contact'</span>, <span class="text-accent font-bold">'hire'</span>.</p>
+                <div class="terminal-output" id="terminal-output"></div>
+                <div class="terminal-prompt-line">
+                  <span class="term-prompt">mohsin@portfolio:~$</span>
+                  <input type="text" id="term-input" class="term-input" autofocus autocomplete="off" spellcheck="false">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS MATRIX SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Core Competencies</span>
+          <h2 class="section-title">Technical Skills &amp; Engineering Stack</h2>
+          <p class="section-subtitle">
+            A verified breakdown of technical capabilities across artificial intelligence, web development, and systems programming.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Category 1 -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="cat-icon text-accent">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div>
+                <h3>Artificial Intelligence &amp; ML</h3>
+                <span>Deep learning, computer vision &amp; NLP</span>
+              </div>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>Deep Learning &amp; Transformers</span>
+                  <span>92%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>Computer Vision (OpenCV)</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>NLP &amp; Text Similarity</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>TensorFlow &amp; Model Optimization</span>
+                  <span>88%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+              </div>
+              <div class="skill-tags">
+                <span class="tag">Object Detection</span>
+                <span class="tag">Medical CAD</span>
+                <span class="tag">Image Segmentation</span>
+                <span class="tag">Model Deployment</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 2 -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="cat-icon text-purple">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <div>
+                <h3>Full Stack &amp; Backend</h3>
+                <span>Web frameworks, APIs &amp; database design</span>
+              </div>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>Python &amp; Flask Framework</span>
+                  <span>94%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 94%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>RESTful API Architecture</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>SQLAlchemy &amp; Database Management</span>
+                  <span>86%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 86%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>HTML5, CSS3 &amp; JavaScript</span>
+                  <span>89%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 89%;"></div></div>
+              </div>
+              <div class="skill-tags">
+                <span class="tag">Authentication / Sessions</span>
+                <span class="tag">WordPress CMS</span>
+                <span class="tag">Flutter UI</span>
+                <span class="tag">Responsive Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 3 -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="cat-icon text-success">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <div>
+                <h3>Systems &amp; Languages</h3>
+                <span>Low-level programming &amp; digital logic</span>
+              </div>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>C++ (OOP, Memory &amp; File IO)</span>
+                  <span>88%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>Digital Logic Design (DLD)</span>
+                  <span>85%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>Problem Solving &amp; Algorithms</span>
+                  <span>91%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 91%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>System Architecture</span>
+                  <span>87%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 87%;"></div></div>
+              </div>
+              <div class="skill-tags">
+                <span class="tag">Object-Oriented Design</span>
+                <span class="tag">Sensor Interfacing</span>
+                <span class="tag">Circuit Simulation</span>
+                <span class="tag">Modular C++</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 4 -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="cat-icon text-warning">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+              <div>
+                <h3>IT Infrastructure &amp; DevOps</h3>
+                <span>Diagnostics, networking &amp; workflow tools</span>
+              </div>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>Git &amp; GitHub Version Control</span>
+                  <span>92%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>IP Configuration &amp; Networking</span>
+                  <span>86%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 86%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>Hardware &amp; Software Troubleshooting</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span>Agile &amp; Scrum Methodologies</span>
+                  <span>88%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+              </div>
+              <div class="skill-tags">
+                <span class="tag">Linux / Windows</span>
+                <span class="tag">AI Workflows</span>
+                <span class="tag">System Optimization</span>
+                <span class="tag">Technical Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS & CASE STUDIES -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Case Studies &amp; Code</span>
+          <h2 class="section-title">Engineered Projects &amp; Research</h2>
+          <p class="section-subtitle">
+            Explore comprehensive architectural breakdowns, metrics, and implementations of key systems.
+          </p>
+
+          <!-- Project Filter Tabs -->
+          <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects (7)</button>
+            <button class="filter-btn" data-filter="ai">AI &amp; Computer Vision (3)</button>
+            <button class="filter-btn" data-filter="web">Full-Stack &amp; Web (2)</button>
+            <button class="filter-btn" data-filter="systems">Systems &amp; Hardware (2)</button>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project 1: GastroCAD -->
+          <article class="project-card" data-category="ai">
+            <div class="project-img-wrapper">
+              <img src="assets/images/gastrocad.jpg" alt="GastroCAD Stomach Cancer CAD System" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-primary open-modal-btn" data-project="gastrocad">
+                  <i class="fa-solid fa-book-open"></i> View Case Study
+                </button>
+              </div>
+              <span class="project-tag-floating">Flagship Research</span>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="badge badge-accent">Transformers</span>
+                <span class="badge badge-purple">Deep Learning</span>
+                <span class="badge badge-cyan">Flutter UI</span>
+                <span class="badge">Medical CAD</span>
+              </div>
+              <h3 class="project-title">GastroCAD: Real-Time Stomach Cancer Diagnostic CAD</h3>
+              <p class="project-desc">
+                An AI-powered computer-aided diagnosis system utilizing transformer deep learning models and a clean Flutter clinical interface to detect and visualize stomach cancer and gastric disorders from real-time endoscopic imagery.
+              </p>
+              <div class="project-metrics">
+                <div class="metric"><i class="fa-solid fa-gauge-high text-accent"></i> 42ms Inference Latency</div>
+                <div class="metric"><i class="fa-solid fa-bullseye text-success"></i> 89.2% Clinical F1-Score</div>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-outline btn-sm open-modal-btn" data-project="gastrocad">
+                  Deep-Dive Case Study <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: NeuralVision Computer Vision Suite -->
+          <article class="project-card" data-category="ai">
+            <div class="project-img-wrapper">
+              <img src="assets/images/cv_suite.jpg" alt="NeuralVision Computer Vision Suite" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-primary open-modal-btn" data-project="vision">
+                  <i class="fa-solid fa-book-open"></i> View Case Study
+                </button>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="badge badge-accent">OpenCV</span>
+                <span class="badge badge-warning">TensorFlow</span>
+                <span class="badge">Python</span>
+                <span class="badge">Computer Vision</span>
+              </div>
+              <h3 class="project-title">NeuralVision: Multi-Module Computer Vision Suite</h3>
+              <p class="project-desc">
+                A multi-application computer vision framework encompassing Automatic Car License Plate Recognition (ALPR), 68-point facial landmark mesh, bone fracture X-ray identification, and eye gaze tracking.
+              </p>
+              <div class="project-metrics">
+                <div class="metric"><i class="fa-solid fa-bolt text-accent"></i> 30+ FPS Live Processing</div>
+                <div class="metric"><i class="fa-solid fa-car text-success"></i> 98% OCR Plate Precision</div>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-outline btn-sm open-modal-btn" data-project="vision">
+                  Deep-Dive Case Study <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Full-Stack Flask Web App -->
+          <article class="project-card" data-category="web">
+            <div class="project-img-wrapper">
+              <img src="assets/images/fullstack_app.jpg" alt="Full Stack Flask Web App" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-primary open-modal-btn" data-project="flask-app">
+                  <i class="fa-solid fa-book-open"></i> View Case Study
+                </button>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="badge badge-accent">Python / Flask</span>
+                <span class="badge badge-purple">SQLAlchemy</span>
+                <span class="badge">RESTful APIs</span>
+                <span class="badge">Auth</span>
+              </div>
+              <h3 class="project-title">Enterprise Flask Web Application &amp; REST Engine</h3>
+              <p class="project-desc">
+                Full-stack web application designed at Smart Tech Solutions featuring robust database schema design, secure user authentication, session state management, and optimized API throughput.
+              </p>
+              <div class="project-metrics">
+                <div class="metric"><i class="fa-solid fa-lock text-accent"></i> Role-Based Auth</div>
+                <div class="metric"><i class="fa-solid fa-database text-purple"></i> SQLAlchemy ORM</div>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-outline btn-sm open-modal-btn" data-project="flask-app">
+                  Deep-Dive Case Study <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Smart Home Voice Automation -->
+          <article class="project-card" data-category="systems">
+            <div class="project-img-wrapper">
+              <img src="assets/images/smarthome.jpg" alt="Smart Home Voice Automation" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-primary open-modal-btn" data-project="smarthome">
+                  <i class="fa-solid fa-book-open"></i> View Case Study
+                </button>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="badge badge-success">C++</span>
+                <span class="badge badge-cyan">IoT &amp; Hardware</span>
+                <span class="badge">Voice Recognition</span>
+              </div>
+              <h3 class="project-title">Voice-Controlled Smart Home Automation System</h3>
+              <p class="project-desc">
+                End-to-end hardware-software system in C++ integrating physical relay actuators, lighting, and ventilation appliances with real-time voice command processing and telemetry feedback.
+              </p>
+              <div class="project-metrics">
+                <div class="metric"><i class="fa-solid fa-microphone text-accent"></i> Real-Time Voice Parsing</div>
+                <div class="metric"><i class="fa-solid fa-lightbulb text-warning"></i> Physical Prototype Tested</div>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-outline btn-sm open-modal-btn" data-project="smarthome">
+                  Deep-Dive Case Study <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: AI FAQ Chatbot & Learning Game -->
+          <article class="project-card" data-category="ai">
+            <div class="project-content no-img-card">
+              <div class="project-tags">
+                <span class="badge badge-accent">NLP</span>
+                <span class="badge badge-purple">Text Similarity</span>
+                <span class="badge">Flask</span>
+                <span class="badge">Game AI</span>
+              </div>
+              <h3 class="project-title">FAQ Semantic Chatbot &amp; Adaptive Game AI</h3>
+              <p class="project-desc">
+                Developed at Apexcify Technologys: An automated FAQ assistant powered by cosine text similarity and TF-IDF vectors, coupled with a self-learning Rock-Paper-Scissors game that predicts player psychological tendencies.
+              </p>
+              <div class="project-metrics">
+                <div class="metric"><i class="fa-solid fa-comment-dots text-accent"></i> Automated Query Resolution</div>
+                <div class="metric"><i class="fa-solid fa-brain text-purple"></i> Adaptive Opponent Heuristic</div>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-outline btn-sm open-modal-btn" data-project="nlp-chatbot">
+                  Deep-Dive Case Study <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Automated Irrigation System (DLD) -->
+          <article class="project-card" data-category="systems">
+            <div class="project-content no-img-card">
+              <div class="project-tags">
+                <span class="badge badge-success">Digital Logic (DLD)</span>
+                <span class="badge">Logic Gates</span>
+                <span class="badge">Sensor Circuits</span>
+              </div>
+              <h3 class="project-title">Automated Irrigation Control System via DLD</h3>
+              <p class="project-desc">
+                Designed an automated agricultural irrigation system utilizing logic gates, moisture sensor inputs, and truth-table decision circuits to optimize water distribution schedules and promote sustainable farming.
+              </p>
+              <div class="project-metrics">
+                <div class="metric"><i class="fa-solid fa-droplet text-accent"></i> Water Conservation Logic</div>
+                <div class="metric"><i class="fa-solid fa-microchip text-success"></i> Gate-Level Architecture</div>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-outline btn-sm open-modal-btn" data-project="irrigation-dld">
+                  Deep-Dive Case Study <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 7: Railway Management System in C++ -->
+          <article class="project-card" data-category="web">
+            <div class="project-content no-img-card">
+              <div class="project-tags">
+                <span class="badge badge-success">C++ OOP</span>
+                <span class="badge">File I/O</span>
+                <span class="badge">Data Modeling</span>
+              </div>
+              <h3 class="project-title">Railway Reservation &amp; Schedule Management System</h3>
+              <p class="project-desc">
+                Console-based enterprise transit platform implementing core Object-Oriented Programming (OOP) concepts, inheritance hierarchy, passenger seat allocations, and persistent binary file management.
+              </p>
+              <div class="project-metrics">
+                <div class="metric"><i class="fa-solid fa-train text-accent"></i> Schedule &amp; Ticket Engine</div>
+                <div class="metric"><i class="fa-solid fa-file-code text-purple"></i> Persistent File Records</div>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-outline btn-sm open-modal-btn" data-project="railway-system">
+                  Deep-Dive Case Study <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE TIMELINE -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Career Journey</span>
+          <h2 class="section-title">Professional Work Experience</h2>
+          <p class="section-subtitle">
+            A track record of technical delivery across AI development, IT infrastructure, and web engineering.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <!-- Experience 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot current-dot"></div>
+            <div class="timeline-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Full Stack AI Engineer</h3>
+                  <h4 class="exp-company"><i class="fa-solid fa-building text-accent"></i> Whoopit SMC Pvt Ltd | Digital Marketing Solutions</h4>
+                </div>
+                <div class="exp-badge current-badge">
+                  <span>01/06/2026 – Present</span>
+                  <small>Haripur, Pakistan</small>
+                </div>
+              </div>
+              <ul class="exp-bullets">
+                <li>Engineered and scaled full-stack web applications using modern web technologies and clean architecture.</li>
+                <li>Built automated AI workflows and seamlessly integrated commercial AI APIs into business applications.</li>
+                <li>Developed, optimized, and maintained frontend, backend, and relational database layers.</li>
+                <li>Automated critical business processes to drive operational efficiency and superior user experience.</li>
+                <li>Collaborated within a cross-functional agile team utilizing Git version control and sprint cycles.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="tag">AI Workflows</span>
+                <span class="tag">API Integration</span>
+                <span class="tag">Full-Stack Development</span>
+                <span class="tag">Git &amp; Agile</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">IT Assistant</h3>
+                  <h4 class="exp-company"><i class="fa-solid fa-server text-accent"></i> Bali Tech Pvt Ltd</h4>
+                </div>
+                <div class="exp-badge">
+                  <span>01/03/2026 – 31/05/2026</span>
+                  <small>Rawalpindi, Pakistan</small>
+                </div>
+              </div>
+              <ul class="exp-bullets">
+                <li>Provided high-priority IT support in a rapid corporate environment, resolving client and infrastructure tickets.</li>
+                <li>Diagnosed and eliminated hardware, software, and local network bottlenecks to maximize server uptime.</li>
+                <li>Configured subnet IP settings, DNS, routers, and resolved complex connectivity issues.</li>
+                <li>Installed, maintained, and modernized company IT equipment, workstations, and operating systems.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="tag">Network Configuration</span>
+                <span class="tag">IP Troubleshooting</span>
+                <span class="tag">System Maintenance</span>
+                <span class="tag">Hardware &amp; IT Support</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Artificial Intelligence Intern</h3>
+                  <h4 class="exp-company"><i class="fa-solid fa-brain text-accent"></i> Apexcify Technologys</h4>
+                </div>
+                <div class="exp-badge">
+                  <span>01/03/2026 – 30/04/2026</span>
+                  <small>Pakistan</small>
+                </div>
+              </div>
+              <ul class="exp-bullets">
+                <li>Researched and built machine learning pipelines using Python, Flask framework, and Natural Language Processing.</li>
+                <li>Constructed an intelligent FAQ chatbot utilizing text similarity vector algorithms for automated question answering.</li>
+                <li>Created a Rock-Paper-Scissors AI game incorporating an adaptive heuristic opponent and responsive web interface.</li>
+                <li>Engineered an Object Detection computer vision module applying deep learning feature extractors.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="tag">Machine Learning</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Python &amp; Flask</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 4 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Python Developer (Internee)</h3>
+                  <h4 class="exp-company"><i class="fa-brands fa-python text-accent"></i> Smart Tech Solutions</h4>
+                </div>
+                <div class="exp-badge">
+                  <span>01/06/2024 – 31/08/2024</span>
+                  <small>Islamabad, Pakistan</small>
+                </div>
+              </div>
+              <ul class="exp-bullets">
+                <li>Developed full-stack web applications using the Flask framework, unifying backend logic with responsive front-end views.</li>
+                <li>Architected RESTful endpoints and managed database interactions via SQLAlchemy ORM.</li>
+                <li>Implemented secure user registration, password hashing, session tokens, and access control.</li>
+                <li>Collaborated closely with senior engineers to optimize query latency and ensure mobile responsiveness.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">SQLAlchemy</span>
+                <span class="tag">RESTful APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 5 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">WordPress Developer (Internee)</h3>
+                  <h4 class="exp-company"><i class="fa-brands fa-wordpress text-accent"></i> Giga Developers</h4>
+                </div>
+                <div class="exp-badge">
+                  <span>01/06/2023 – 09/09/2023</span>
+                  <small>Haripur, Pakistan</small>
+                </div>
+              </div>
+              <ul class="exp-bullets">
+                <li>Customized client WordPress sites through custom themes, CSS styling, and plugin integrations.</li>
+                <li>Contributed to frontend layout design, cross-device responsiveness, and basic search engine optimization (SEO).</li>
+                <li>Participated in live client deployments, debugging UI regressions, and integrating content.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="tag">WordPress</span>
+                <span class="tag">HTML5 / CSS3</span>
+                <span class="tag">SEO Basics</span>
+                <span class="tag">Client Deployments</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">Education &amp; Qualifications</h2>
+          <p class="section-subtitle">
+            Solid academic grounding in artificial intelligence, mathematics, and computer sciences.
+          </p>
+        </div>
+
+        <div class="education-grid">
+          <!-- Degree 1 -->
+          <div class="edu-card featured-edu">
+            <div class="edu-ribbon">Top Academic Rank</div>
+            <div class="edu-header">
+              <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div>
+                <span class="edu-date">01/08/2021 – 30/06/2025</span>
+                <h3 class="edu-degree">Bachelors in Artificial Intelligence</h3>
+                <h4 class="edu-institution"><a href="https://www.uoh.edu.pk/" target="_blank" rel="noopener noreferrer">University of Haripur</a></h4>
+              </div>
+            </div>
+            <div class="edu-stats">
+              <div class="edu-stat-item">
+                <span class="label">Final Grade / CGPA:</span>
+                <strong class="val text-success">3.74 / 4.0 CGPA</strong>
+              </div>
+              <div class="edu-stat-item">
+                <span class="label">EQF Level:</span>
+                <strong class="val">EQF Level 6 (BSc Hons)</strong>
+              </div>
+            </div>
+            <div class="edu-thesis-box">
+              <div class="thesis-header">
+                <i class="fa-solid fa-book-bookmark text-accent"></i>
+                <strong>Graduation Thesis:</strong>
+              </div>
+              <p class="thesis-title">
+                <em>GastroCAD: An AI-Driven Real-Time CAD System for Detection, Analysis and Visualization of Stomach Cancer and Gastric Ailments</em>
+              </p>
+              <p class="thesis-summary">
+                Applied vision transformers and deep convolutional neural networks to endoscopic imagery, implementing automated segmentation, clinical confidence scoring, and interactive diagnostic visualization.
+              </p>
+            </div>
+          </div>
+
+          <!-- Degree 2 & 3 in secondary column -->
+          <div class="secondary-edu-col">
+            <div class="edu-card">
+              <div class="edu-header">
+                <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
+                <div>
+                  <span class="edu-date">01/04/2019 – 30/05/2021</span>
+                  <h3 class="edu-degree">Higher Secondary School Certificate (HSSC)</h3>
+                  <h4 class="edu-institution"><a href="https://thepeace.edu.pk/" target="_blank" rel="noopener noreferrer">Peace College Haripur</a></h4>
+                </div>
+              </div>
+              <p class="edu-field">Science &amp; Pre-Engineering Foundation (EQF Level 4)</p>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-header">
+                <div class="edu-icon"><i class="fa-solid fa-award"></i></div>
+                <div>
+                  <span class="edu-date">01/02/2016 – 30/03/2018</span>
+                  <h3 class="edu-degree">Secondary School Certificate (SSC)</h3>
+                  <h4 class="edu-institution">Jinnah Jam-e School and College Haripur</h4>
+                </div>
+              </div>
+              <div class="edu-stats">
+                <div class="edu-stat-item">
+                  <span class="label">Field:</span>
+                  <strong class="val">Science</strong>
+                </div>
+                <div class="edu-stat-item">
+                  <span class="label">Final Grade:</span>
+                  <strong class="val text-success">83% (First Division)</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Language Proficiency Box -->
+            <div class="language-card">
+              <h4><i class="fa-solid fa-earth-americas text-accent"></i> Language Proficiency</h4>
+              <div class="lang-row">
+                <span class="lang-name">English</span>
+                <span class="lang-level">C1 / C2 Proficient (CEFR Framework)</span>
+              </div>
+              <div class="lang-row">
+                <span class="lang-name">Urdu</span>
+                <span class="lang-level">Native Speaker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & HIRE ME SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In Touch &amp; Hire Mohsin</h2>
+          <p class="section-subtitle">
+            Have an open role, freelance engineering contract, or a project in mind? Reach out directly.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Details Cards -->
+          <div class="contact-cards-col">
+            <!-- Email Card -->
+            <div class="contact-info-card">
+              <div class="card-icon text-accent"><i class="fa-solid fa-envelope"></i></div>
+              <div class="card-info">
+                <span class="label">Direct Email</span>
+                <a href="mailto:mohsinz35425@gmail.com" class="val">mohsinz35425@gmail.com</a>
+              </div>
+              <button class="btn-copy" data-copy="mohsinz35425@gmail.com" title="Copy Email">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <!-- WhatsApp / Phone Card -->
+            <div class="contact-info-card">
+              <div class="card-icon text-success"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="card-info">
+                <span class="label">WhatsApp &amp; Phone</span>
+                <a href="https://wa.me/923319981044" target="_blank" rel="noopener noreferrer" class="val">(+92) 331 9981044</a>
+              </div>
+              <button class="btn-copy" data-copy="+923319981044" title="Copy Phone Number">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <!-- Location Card -->
+            <div class="contact-info-card">
+              <div class="card-icon text-warning"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="card-info">
+                <span class="label">Location</span>
+                <span class="val">Jinnah Gardens Phase 1, Islamabad, Pakistan</span>
+              </div>
+            </div>
+
+            <!-- Direct Resume Download Card -->
+            <div class="resume-cta-card">
+              <div class="resume-cta-content">
+                <h4><i class="fa-solid fa-file-pdf text-danger"></i> Need Mohsin's Official CV?</h4>
+                <p>Download the comprehensive PDF version containing all employment and educational references.</p>
+              </div>
+              <a href="Mohsin_Zafar_Resume.pdf" download="Mohsin_Zafar_Resume.pdf" class="btn btn-primary">
+                <i class="fa-solid fa-download"></i> Download PDF
+              </a>
+            </div>
+          </div>
+
+          <!-- Working Message Form -->
+          <div class="contact-form-col">
+            <div class="form-wrapper-card">
+              <h3><i class="fa-solid fa-paper-plane text-accent"></i> Send a Direct Message</h3>
+              <p class="form-subtext">Messages are routed to mohsinz35425@gmail.com. Expect a response within 24 hours.</p>
+
+              <form id="contact-form" class="contact-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="form-name">Your Full Name <span class="text-danger">*</span></label>
+                    <input type="text" id="form-name" name="name" required placeholder="e.g. John Doe">
+                  </div>
+                  <div class="form-group">
+                    <label for="form-email">Your Email Address <span class="text-danger">*</span></label>
+                    <input type="email" id="form-email" name="email" required placeholder="e.g. john@example.com">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-subject">Subject</label>
+                  <input type="text" id="form-subject" name="subject" placeholder="Project Inquiry / Job Opportunity">
+                </div>
+
+                <div class="form-group">
+                  <label for="form-message">Message <span class="text-danger">*</span></label>
+                  <textarea id="form-message" name="message" rows="5" required placeholder="Describe your project, timeline, or position details..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-full" id="submit-btn">
+                  <i class="fa-solid fa-paper-plane"></i> Send Message
+                </button>
+                <div id="form-feedback" class="form-feedback"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CASE STUDY MODAL DIALOG -->
+  <div class="modal-backdrop" id="case-study-modal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-content" id="modal-content-container">
+        <!-- Dynamic content injected by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="brand-logo">
+          &lt;Mohsin<span class="text-accent">.AI</span> /&gt;
+        </a>
+        <p class="footer-bio">
+          Full Stack AI Engineer passionate about Transformers, Computer Vision, and scalable Web Architecture.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects &amp; Case Studies</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-connect">
+        <h4>Connect Directly</h4>
+        <div class="footer-social-icons">
+          <a href="mailto:mohsinz35425@gmail.com" title="Email" class="footer-social-btn"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://wa.me/923319981044" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="footer-social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="tel:+923319981044" title="Call" class="footer-social-btn"><i class="fa-solid fa-phone"></i></a>
+          <a href="Mohsin_Zafar_Resume.pdf" download="Mohsin_Zafar_Resume.pdf" title="Resume" class="footer-social-btn"><i class="fa-solid fa-file-arrow-down"></i></a>
+        </div>
+        <p class="vercel-badge">
+          <i class="fa-solid fa-triangle-circle-square"></i> Optimized for Vercel Deployment
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container bottom-content">
+        <p>&copy; 2026 Muhammad Mohsin Zafar. All rights reserved.</p>
+        <a href="#hero" class="back-to-top" id="back-to-top">
+          <span>Back to Top</span> <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
