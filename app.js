@@ -277,7 +277,7 @@ function initProjectFiltering() {
 const CASE_STUDIES = {
   gastrocad: {
     title: 'GastroCAD: AI-Driven Real-Time CAD System for Stomach Cancer',
-    subtitle: 'Graduation Thesis Project | University of Haripur (BSc Artificial Intelligence)',
+    subtitle: 'BS AI Graduation Thesis (2025) | University of Haripur',
     image: 'assets/images/gastrocad.jpg',
     category: 'Deep Learning & Medical CAD',
     tags: ['Vision Transformers', 'Flutter UI', 'Cloud Inference', 'Medical Endoscopy', 'Python', 'PyTorch'],
@@ -287,7 +287,7 @@ const CASE_STUDIES = {
       { label: 'Target Pathology', val: 'Gastric Lesions' }
     ],
     problem: `Gastric cancer is one of the leading causes of cancer-related mortality worldwide. Early detection during routine upper endoscopy significantly improves 5-year survival rates; however, flat mucosal lesions and early-stage adenocarcinomas are frequently missed by fatigued clinicians due to subtle morphological deviations.`,
-    scope: `Developed a real-time computer-aided diagnosis (CAD) framework that ingests endoscopic video feeds, segments suspicious tissue using vision transformer attention mechanisms, overlays bounding boxes and heatmaps, and outputs immediate diagnostic confidence scores on a Flutter clinician interface.`,
+    scope: `Developed a real-time computer-aided diagnosis (CAD) framework as my BS AI graduation thesis that ingests endoscopic video feeds, segments suspicious tissue using vision transformer attention mechanisms, overlays bounding boxes and heatmaps, and outputs immediate diagnostic confidence scores on a Flutter clinician interface.`,
     architecture: `
       1. **Frame Ingestion & Preprocessing:** Noise filtering, specular reflection removal, and adaptive histogram equalization.<br>
       2. **Transformer Deep Learning Core:** Fine-tuned Vision Transformer (ViT-CAD) model trained on annotated gastrointestinal datasets, extracting deep morphological features across endoscopic frames.<br>
@@ -301,7 +301,7 @@ const CASE_STUDIES = {
 
   vision: {
     title: 'NeuralVision: Multi-Module Computer Vision Suite',
-    subtitle: 'Semester R&D Research | Real-time Computer Vision & Image Processing',
+    subtitle: '6th Semester Computer Vision Projects | Python, OpenCV & TensorFlow',
     image: 'assets/images/cv_suite.jpg',
     category: 'Computer Vision & Deep Learning',
     tags: ['OpenCV', 'TensorFlow', 'Python', 'ALPR', 'Facial Landmarks', 'Bone X-Ray'],
@@ -311,7 +311,7 @@ const CASE_STUDIES = {
       { label: 'Landmark Points', val: '68 Nodes' }
     ],
     problem: `Autonomous inspection systems require multi-faceted computer vision pipelines operating simultaneously without resource contention or latency degradation.`,
-    scope: `Built a unified computer vision research suite containing four distinct practical modules: Automatic License Plate Recognition (ALPR), 68-Point Facial Landmark Mapping, Bone Fracture X-Ray Classification, and Pupil Gaze Tracking.`,
+    scope: `Built a unified computer vision research suite during 6th semester coursework containing four distinct practical modules: Automatic License Plate Recognition (ALPR), 68-Point Facial Landmark Mapping, Bone Fracture X-Ray Classification, and Pupil Gaze Tracking.`,
     architecture: `
       1. **License Plate Recognition (ALPR):** Grayscale conversion, bilateral filtering, edge detection, contour localization of rectangular plates, and Tesseract OCR character extraction.<br>
       2. **Facial Landmark Mesh:** Real-time geometric mapping tracking 68 facial features for gaze direction, fatigue detection, and expression mapping.<br>
@@ -324,8 +324,8 @@ const CASE_STUDIES = {
   },
 
   'flask-app': {
-    title: 'Enterprise Flask Web Application & REST API Engine',
-    subtitle: 'Software Engineering Experience | Smart Tech Solutions',
+    title: 'Full-Stack Flask Web Platform & REST API Engine',
+    subtitle: 'Python Developer Internship | Smart Tech Solutions (Islamabad, 2024)',
     image: 'assets/images/fullstack_app.jpg',
     category: 'Full Stack & Backend Engineering',
     tags: ['Python', 'Flask', 'SQLAlchemy', 'REST APIs', 'JWT / Auth', 'PostgreSQL'],
@@ -348,7 +348,7 @@ const CASE_STUDIES = {
 
   smarthome: {
     title: 'Voice-Controlled Smart Home Automation System',
-    subtitle: 'Embedded Hardware-Software Prototype | C++ & IoT',
+    subtitle: 'Embedded Hardware-Software Prototype | C++ & Relay Actuation (Semester Project)',
     image: 'assets/images/smarthome.jpg',
     category: 'Systems & Hardware Integration',
     tags: ['C++', 'IoT', 'Voice Recognition', 'Hardware Relays', 'Real-Time Systems'],
@@ -371,7 +371,7 @@ const CASE_STUDIES = {
 
   'nlp-chatbot': {
     title: 'Semantic FAQ Chatbot & Heuristic Game AI',
-    subtitle: 'AI Research Internship | Apexcify Technologys',
+    subtitle: 'AI Research Internship | Apexcify Technologys (2026)',
     image: '',
     category: 'Natural Language Processing & AI Games',
     tags: ['Python', 'NLP', 'TF-IDF', 'Cosine Similarity', 'Heuristics', 'Flask'],
@@ -394,7 +394,7 @@ const CASE_STUDIES = {
 
   'irrigation-dld': {
     title: 'Automated Sensor-Driven Irrigation System (DLD)',
-    subtitle: 'Hardware Logic Design | Digital Logic Design Course',
+    subtitle: 'Coursework Project | Digital Logic Design (DLD), University of Haripur',
     image: '',
     category: 'Digital Logic & Circuit Automation',
     tags: ['Digital Logic Design', 'Logic Gates', 'Sensors', 'Water Efficiency', 'Truth Tables'],
@@ -417,7 +417,7 @@ const CASE_STUDIES = {
 
   'railway-system': {
     title: 'Railway Reservation & Train Management System',
-    subtitle: 'Object-Oriented Programming (OOP) System | C++',
+    subtitle: '2nd Semester Team Project | C++ Object-Oriented Programming (OOP)',
     image: '',
     category: 'Systems & Object-Oriented Software',
     tags: ['C++', 'OOP Principles', 'File Handling', 'Data Structures', 'Inheritance'],
@@ -756,13 +756,13 @@ Backend   : Python (Flask), RESTful APIs, SQLAlchemy, C++
 Frontend  : HTML5, CSS3, JavaScript, Flutter, WordPress
 Tools     : Git, GitHub, Agile/Scrum, IP Networking, Linux`,
 
-    projects: `1. GastroCAD            - Stomach Cancer AI CAD System (ViT + Flutter)
-2. NeuralVision Suite   - License Plate OCR, 68-Face Mesh, Bone X-Ray
-3. DevOpsFlow Flask App - Full-stack REST API with SQLAlchemy ORM
-4. Smart Home IoT       - C++ voice-controlled hardware prototype
-5. FAQ Chatbot & AI     - NLP cosine similarity & heuristic game AI
-6. Irrigation DLD       - Logic circuit automation for agriculture
-7. Railway Management   - C++ OOP passenger reservation system`,
+    projects: `1. GastroCAD            - BS AI Graduation Thesis: Stomach Cancer CAD (ViT + Flutter)
+2. NeuralVision Suite   - 6th Sem Vision R&D: License Plate OCR, 68-Face Mesh, Bone X-Ray
+3. Full-Stack Flask App - Smart Tech Solutions Internship (REST APIs & SQLAlchemy ORM)
+4. Smart Home IoT       - C++ hardware-software voice-controlled prototype
+5. FAQ Chatbot & AI     - Apexcify Tech Internship: NLP cosine similarity & game AI
+6. Irrigation DLD       - Digital Logic Design Coursework: Automated valve gating
+7. Railway Management   - 2nd Semester OOP Project: C++ reservation engine`,
 
     exp: `• Whoopit SMC (06/2026 - Present): Full Stack AI Engineer
 • Bali Tech (03/2026 - 05/2026) : IT Assistant
