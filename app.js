@@ -276,9 +276,11 @@ function initProjectFiltering() {
    ========================================================================== */
 const CASE_STUDIES = {
   gastrocad: {
-    title: 'GastroCAD: AI-Driven Real-Time CAD System for Stomach Cancer',
+    title: 'GastroCAD: Real-Time Stomach Cancer Diagnostic CAD',
     subtitle: 'BS AI Graduation Thesis (2025) | University of Haripur',
-    image: 'assets/images/gastrocad.jpg',
+    bannerClass: 'banner-gastrocad',
+    icon: 'fa-microscope',
+    badge: 'BS AI Graduation Thesis (2025)',
     category: 'Deep Learning & Medical CAD',
     tags: ['Vision Transformers', 'Flutter UI', 'Cloud Inference', 'Medical Endoscopy', 'Python', 'PyTorch'],
     metrics: [
@@ -302,7 +304,9 @@ const CASE_STUDIES = {
   vision: {
     title: 'NeuralVision: Multi-Module Computer Vision Suite',
     subtitle: '6th Semester Computer Vision Projects | Python, OpenCV & TensorFlow',
-    image: 'assets/images/cv_suite.jpg',
+    bannerClass: 'banner-vision',
+    icon: 'fa-eye',
+    badge: '6th Sem Vision R&D',
     category: 'Computer Vision & Deep Learning',
     tags: ['OpenCV', 'TensorFlow', 'Python', 'ALPR', 'Facial Landmarks', 'Bone X-Ray'],
     metrics: [
@@ -326,7 +330,9 @@ const CASE_STUDIES = {
   'flask-app': {
     title: 'Full-Stack Flask Web Platform & REST API Engine',
     subtitle: 'Python Developer Internship | Smart Tech Solutions (Islamabad, 2024)',
-    image: 'assets/images/fullstack_app.jpg',
+    bannerClass: 'banner-flask',
+    icon: 'fa-server',
+    badge: 'Smart Tech Internship',
     category: 'Full Stack & Backend Engineering',
     tags: ['Python', 'Flask', 'SQLAlchemy', 'REST APIs', 'JWT / Auth', 'PostgreSQL'],
     metrics: [
@@ -349,7 +355,9 @@ const CASE_STUDIES = {
   smarthome: {
     title: 'Voice-Controlled Smart Home Automation System',
     subtitle: 'Embedded Hardware-Software Prototype | C++ & Relay Actuation (Semester Project)',
-    image: 'assets/images/smarthome.jpg',
+    bannerClass: 'banner-smarthome',
+    icon: 'fa-microchip',
+    badge: 'C++ Hardware Project',
     category: 'Systems & Hardware Integration',
     tags: ['C++', 'IoT', 'Voice Recognition', 'Hardware Relays', 'Real-Time Systems'],
     metrics: [
@@ -372,7 +380,9 @@ const CASE_STUDIES = {
   'nlp-chatbot': {
     title: 'Semantic FAQ Chatbot & Heuristic Game AI',
     subtitle: 'AI Research Internship | Apexcify Technologys (2026)',
-    image: '',
+    bannerClass: 'banner-nlp',
+    icon: 'fa-comments',
+    badge: 'Apexcify Internship',
     category: 'Natural Language Processing & AI Games',
     tags: ['Python', 'NLP', 'TF-IDF', 'Cosine Similarity', 'Heuristics', 'Flask'],
     metrics: [
@@ -395,7 +405,9 @@ const CASE_STUDIES = {
   'irrigation-dld': {
     title: 'Automated Sensor-Driven Irrigation System (DLD)',
     subtitle: 'Coursework Project | Digital Logic Design (DLD), University of Haripur',
-    image: '',
+    bannerClass: 'banner-irrigation',
+    icon: 'fa-seedling',
+    badge: 'DLD Coursework',
     category: 'Digital Logic & Circuit Automation',
     tags: ['Digital Logic Design', 'Logic Gates', 'Sensors', 'Water Efficiency', 'Truth Tables'],
     metrics: [
@@ -418,7 +430,9 @@ const CASE_STUDIES = {
   'railway-system': {
     title: 'Railway Reservation & Train Management System',
     subtitle: '2nd Semester Team Project | C++ Object-Oriented Programming (OOP)',
-    image: '',
+    bannerClass: 'banner-railway',
+    icon: 'fa-train',
+    badge: '2nd Sem OOP Project',
     category: 'Systems & Object-Oriented Software',
     tags: ['C++', 'OOP Principles', 'File Handling', 'Data Structures', 'Inheritance'],
     metrics: [
@@ -464,14 +478,21 @@ function initCaseStudyModal() {
       tagsHtml += `<span class="badge badge-accent">${t}</span> `;
     });
 
-    let imgHtml = data.image ? `<img src="${data.image}" alt="${data.title}" class="modal-header-img">` : '';
+    const bannerHtml = `
+      <div class="modal-tech-banner ${data.bannerClass || 'banner-gastrocad'}">
+        <i class="fa-solid ${data.icon || 'fa-code'} modal-tech-banner-watermark"></i>
+        <div class="modal-tech-banner-content">
+          <div class="modal-tech-banner-tag">
+            <i class="fa-solid ${data.icon || 'fa-code'}"></i> ${data.badge || data.category}
+          </div>
+          <h2 class="modal-tech-banner-title">${data.title}</h2>
+          <p class="modal-tech-banner-sub">${data.subtitle}</p>
+        </div>
+      </div>
+    `;
 
     container.innerHTML = `
-      ${imgHtml}
-      <span class="section-tag">${data.category}</span>
-      <h2 class="modal-title">${data.title}</h2>
-      <p class="modal-subtitle">${data.subtitle}</p>
-
+      ${bannerHtml}
       <div class="project-tags" style="margin-bottom: 20px;">
         ${tagsHtml}
       </div>

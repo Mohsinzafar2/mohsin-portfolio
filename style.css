@@ -1403,7 +1403,7 @@ button, input, textarea {
   background: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  padding: 22px 24px;
+  overflow: hidden;
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
@@ -1418,104 +1418,246 @@ button, input, textarea {
   box-shadow: var(--shadow-md);
 }
 
+[data-theme="dark"] .project-card:hover {
+  border-color: rgba(59, 130, 246, 0.45);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
 /* Featured Top Project (GastroCAD Graduation Thesis) */
 .project-card.featured-project {
   grid-column: 1 / -1;
-  padding: 26px 30px;
   border: 1px solid #bfdbfe;
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, #f0f7ff 100%);
+  background: var(--bg-secondary);
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 28px;
-  align-items: center;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: stretch;
 }
 
 [data-theme="dark"] .project-card.featured-project {
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, #0c1a32 100%);
   border-color: rgba(59, 130, 246, 0.35);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .project-card.featured-project {
     grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 20px;
   }
 }
 
-.project-card-header {
+/* ==========================================================================
+   PROJECT COVER TECH BANNERS (Typography & Brand Graphics)
+   ========================================================================== */
+.project-banner {
+  position: relative;
+  width: 100%;
+  height: 155px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  color: #ffffff;
+  user-select: none;
+  background-size: cover;
+  transition: transform var(--transition-base);
+}
+
+.featured-project .project-banner {
+  height: 100%;
+  min-height: 250px;
+  padding: 24px 26px;
+}
+
+@media (max-width: 900px) {
+  .featured-project .project-banner {
+    min-height: 180px;
+  }
+}
+
+/* Subtle tech grid background on banners */
+.project-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.48) 100%);
+  background-size: 16px 16px, 100% 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Watermark domain icon in background */
+.project-banner-watermark {
+  position: absolute;
+  right: -8px;
+  bottom: -15px;
+  font-size: 5.5rem;
+  color: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+  z-index: 1;
+  transition: transform var(--transition-slow), color var(--transition-base);
+}
+
+.featured-project .project-banner-watermark {
+  font-size: 8.5rem;
+  right: -10px;
+  bottom: -20px;
+}
+
+.project-card:hover .project-banner-watermark {
+  transform: scale(1.08) rotate(-4deg);
+  color: rgba(255, 255, 255, 0.15);
+}
+
+/* Banner Top Row */
+.project-banner-top {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
+  gap: 10px;
 }
 
-.project-icon-box {
-  width: 42px;
-  height: 42px;
-  border-radius: var(--radius-md);
-  background: #eff6ff;
-  border: 1px solid #dbeafe;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  color: var(--accent-blue);
-  flex-shrink: 0;
-}
-
-[data-theme="dark"] .project-icon-box {
-  background: var(--bg-tertiary);
-  border-color: var(--border-subtle);
-  color: #38bdf8;
-}
-
-.project-academic-tag {
+.project-banner-tag {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  color: var(--accent-blue);
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   padding: 3px 9px;
   border-radius: var(--radius-full);
-  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
 }
 
-[data-theme="dark"] .project-academic-tag {
-  background: rgba(37, 99, 235, 0.2);
-  color: #93c5fd;
-  border-color: rgba(59, 130, 246, 0.3);
+.project-banner-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
 }
 
-.project-title {
-  font-size: 1.12rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: var(--text-primary);
+/* Banner Main Content */
+.project-banner-body {
+  position: relative;
+  z-index: 2;
+}
+
+.project-banner-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 4px;
+}
+
+.featured-project .project-banner-name {
+  font-size: 1.7rem;
+  margin-bottom: 6px;
+}
+
+.project-banner-sub {
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.88);
   line-height: 1.35;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
-.featured-project .project-title {
-  font-size: 1.3rem;
-  margin-bottom: 8px;
+.featured-project .project-banner-sub {
+  font-size: 0.88rem;
+}
+
+/* Banner Hover Overlay */
+.project-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.project-card:hover .project-banner-overlay {
+  opacity: 1;
+}
+
+.project-banner-overlay .btn {
+  font-size: 0.82rem;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* Banner Gradients */
+.banner-gastrocad {
+  background: linear-gradient(135deg, #091a36 0%, #1e1b4b 55%, #172554 100%);
+}
+.banner-vision {
+  background: linear-gradient(135deg, #041f33 0%, #0c3354 55%, #0e4868 100%);
+}
+.banner-flask {
+  background: linear-gradient(135deg, #1b0c33 0%, #31136b 55%, #231d5c 100%);
+}
+.banner-smarthome {
+  background: linear-gradient(135deg, #07261d 0%, #064e3b 55%, #043828 100%);
+}
+.banner-nlp {
+  background: linear-gradient(135deg, #260c33 0%, #4a044e 55%, #3b0764 100%);
+}
+.banner-irrigation {
+  background: linear-gradient(135deg, #08291f 0%, #166534 55%, #064e3b 100%);
+}
+.banner-railway {
+  background: linear-gradient(135deg, #241405 0%, #451a03 55%, #1c1917 100%);
+}
+
+/* Card Body Content */
+.project-card-body {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.featured-project .project-card-body {
+  padding: 24px 28px;
 }
 
 .project-desc {
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   color: var(--text-secondary);
-  line-height: 1.55;
-  margin-bottom: 14px;
+  line-height: 1.52;
+  margin-bottom: 12px;
 }
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .project-tags .badge {
@@ -1530,7 +1672,7 @@ button, input, textarea {
   padding: 7px 11px;
   background: var(--bg-tertiary);
   border-radius: var(--radius-sm);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .metric {
@@ -1546,14 +1688,14 @@ button, input, textarea {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-top: 12px;
+  padding-top: 10px;
   border-top: 1px solid var(--border-subtle);
   margin-top: auto;
 }
 
 .project-footer .btn {
   font-size: 0.82rem;
-  padding: 6px 14px;
+  padding: 5px 13px;
 }
 
 /* ==========================================================================
@@ -2587,12 +2729,95 @@ button, input, textarea {
   padding: 32px;
 }
 
-.modal-header-img {
-  width: 100%;
-  max-height: 340px;
-  object-fit: cover;
-  border-radius: var(--radius-md);
-  margin-bottom: 22px;
+/* Modal Header Tech Banner */
+.modal-tech-banner {
+  position: relative;
+  width: calc(100% + 64px);
+  margin: -32px -32px 24px -32px;
+  padding: 36px 36px 28px 36px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  overflow: hidden;
+  color: #ffffff;
+  background-size: cover;
+}
+
+.modal-tech-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-size: 18px 18px, 100% 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.modal-tech-banner-watermark {
+  position: absolute;
+  right: 15px;
+  bottom: -20px;
+  font-size: 7.5rem;
+  color: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.modal-tech-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 82%;
+}
+
+.modal-tech-banner-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.modal-tech-banner-title {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  margin-bottom: 6px;
+}
+
+.modal-tech-banner-sub {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.4;
+}
+
+@media (max-width: 680px) {
+  .modal-content {
+    padding: 20px;
+  }
+  .modal-tech-banner {
+    width: calc(100% + 40px);
+    margin: -20px -20px 18px -20px;
+    padding: 24px 20px;
+  }
+  .modal-tech-banner-content {
+    max-width: 100%;
+  }
+  .modal-tech-banner-title {
+    font-size: 1.25rem;
+  }
 }
 
 .modal-title {
