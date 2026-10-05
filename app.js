@@ -147,10 +147,10 @@ function initNeuralCanvas() {
     }
 
     draw() {
-      const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = isDark ? 'rgba(6, 182, 212, 0.7)' : 'rgba(2, 132, 199, 0.6)';
+      ctx.fillStyle = isDark ? 'rgba(56, 189, 248, 0.6)' : 'rgba(79, 70, 229, 0.35)';
       ctx.fill();
     }
   }
@@ -162,8 +162,8 @@ function initNeuralCanvas() {
   function animate() {
     ctx.clearRect(0, 0, width, height);
 
-    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-    const lineColor = isDark ? '6, 182, 212' : '2, 132, 199';
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const lineColor = isDark ? '56, 189, 248' : '79, 70, 229';
 
     for (let i = 0; i < particles.length; i++) {
       particles[i].update();
@@ -175,12 +175,12 @@ function initNeuralCanvas() {
         const dist = Math.sqrt(dx * dx + dy * dy);
 
         if (dist < maxDistance) {
-          const alpha = (1 - dist / maxDistance) * 0.28;
+          const alpha = (1 - dist / maxDistance) * (isDark ? 0.25 : 0.14);
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
           ctx.strokeStyle = `rgba(${lineColor}, ${alpha})`;
-          ctx.lineWidth = 0.9;
+          ctx.lineWidth = 0.85;
           ctx.stroke();
         }
       }
@@ -229,7 +229,7 @@ function initNavbarAndDrawer() {
    ========================================================================== */
 function initThemeToggle() {
   const toggleBtn = document.getElementById('theme-toggle');
-  const currentTheme = localStorage.getItem('mohsin_theme') || 'dark';
+  const currentTheme = localStorage.getItem('mohsin_theme') || 'light';
 
   document.documentElement.setAttribute('data-theme', currentTheme);
 
