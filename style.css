@@ -820,6 +820,33 @@ button, input, textarea {
   box-shadow: 0 4px 18px rgba(37, 99, 235, 0.2);
 }
 
+.profile-avatar-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #e0e7ff 100%);
+  border: 3px solid #3b82f6;
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  font-size: 3.8rem;
+  transition: all var(--transition-base);
+}
+
+[data-theme="dark"] .profile-avatar-icon {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-color: #38bdf8;
+  color: #38bdf8;
+  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.2);
+}
+
+.profile-card-glass:hover .profile-avatar-icon {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.28);
+}
+
 .avatar-badge {
   position: absolute;
   bottom: 4px;
